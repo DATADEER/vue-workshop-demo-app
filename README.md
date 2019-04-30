@@ -8,6 +8,7 @@
     * Integration von Vuex
     * Integration von Vue-Router
     * Integration von Babel
+    * Router Mode: History
 * packages
     * vuetify
     * lodash
