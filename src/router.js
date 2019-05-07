@@ -1,9 +1,10 @@
 import Vue from "vue";
 import Router from "vue-router";
+import ExamplePreview from "@/views/ExamplePreview";
 
 Vue.use(Router);
 
-const routes = [];
+const routes = [{ path: "/", component: ExamplePreview }];
 
 export default new Router({
   mode: "history",
