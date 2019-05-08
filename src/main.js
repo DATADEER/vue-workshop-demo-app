@@ -12,7 +12,10 @@ import Vuetify, {
   VLayout,
   VCard,
   VSelect,
-  VCardTitle
+  VCardTitle,
+  VChip,
+  VAvatar,
+  VIcon
 } from "vuetify/lib";
 import colors from "vuetify/es5/util/colors";
 import "vuetify/dist/vuetify.min.css";
@@ -28,7 +31,10 @@ Vue.use(Vuetify, {
     VFlex,
     VCard,
     VSelect,
-    VCardTitle
+    VCardTitle,
+    VChip,
+    VAvatar,
+    VIcon
   },
   theme: {
     primary: colors.purple,
