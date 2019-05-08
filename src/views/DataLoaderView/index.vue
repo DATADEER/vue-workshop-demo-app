@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import Request from "./../../components/DataLoader/Request.vue";
+import Request from "../../components/DataLoader/Request/index.vue";
 export default {
   name: "DataComponent",
   components: { Request }

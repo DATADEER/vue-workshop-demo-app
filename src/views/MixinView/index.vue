@@ -13,7 +13,7 @@
 
 <script>
 import locale from "@/shared/mixins/locale.js";
-import GhostButton from "@/components/Buttons/GhostButton.vue";
+import GhostButton from "@/components/Buttons/GhostButton/index.vue";
 
 export default {
   name: "MixinView",

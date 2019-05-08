@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import Button from "@/components/Buttons/Button.vue";
+import Button from "@/components/Buttons/Button/index.vue";
 
 export default {
   name: "Modal",
@@ -34,7 +34,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./../../shared/styles/variables.scss";
+@import "../../../shared/styles/variables";
 
 .modal__backdrop {
   background-color: rgba(0, 0, 0, 0.3);

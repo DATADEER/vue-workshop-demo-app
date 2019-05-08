@@ -11,6 +11,8 @@ import IsComponent from "@/views/IsComponent/index.vue";
 import Lifecycle from "@/views/Lifecycle/index.vue";
 import MixinView from "@/views/MixinView/index.vue";
 import ModalView from "@/views/ModalView/index.vue";
+import RoutingView from "@/views/RoutingView/index.vue";
+import ToggleView from "@/views/ToggleView/index.vue";
 
 const LazyLoadExample = () => import("@/views/LazyLoadExample");
 
@@ -28,6 +30,24 @@ const routes = [
   { path: "/lifecycle", component: Lifecycle },
   { path: "/mixin", component: MixinView },
   { path: "/modal", component: ModalView },
+  {
+    path: "/routing",
+    name: "Routing",
+    component: RoutingView,
+    children: [
+      {
+        path: ":id",
+        name: "RoutingById",
+        component: RoutingView
+      }
+    ]
+  },
+  {
+    path: "/routing/:id/name/:name",
+    name: "RoutingByIdAndName",
+    component: RoutingView
+  },
+  { path: "/toggle", component: ToggleView },
   { path: "*", component: Error404 } // has to exist to catch any non existing page requests
 ];
 

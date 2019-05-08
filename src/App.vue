@@ -6,3 +6,6 @@
     </v-container>
   </v-app>
 </template>
+<style lang="scss">
+@import "./shared/styles/index.scss";
+</style>

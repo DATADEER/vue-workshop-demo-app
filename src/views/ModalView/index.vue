@@ -17,8 +17,8 @@
 </template>
 
 <script>
-import Button from "@/components/Buttons/Button.vue";
-import Modal from "@/components/Modal/Modal.vue";
+import Button from "@/components/Buttons/Button/index.vue";
+import Modal from "@/components/Modal/Basic/index.vue";
 
 export default {
   name: "ModalTest",
