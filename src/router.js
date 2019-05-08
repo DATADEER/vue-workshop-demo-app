@@ -2,14 +2,23 @@ import Vue from "vue";
 import Router from "vue-router";
 import ExamplePreview from "@/views/ExamplePreview";
 import AsyncExamplePreview from "@/views/AsyncExamplePreview";
+import Error404 from "@/views/404/index.vue";
+import CustomDirective from "@/views/CustomDirective/index.vue";
+import Home from "@/views/Home/index.vue";
+import DataLoaderView from "@/views/DataLoaderView/index.vue";
+
 const LazyLoadExample = () => import("@/views/LazyLoadExample");
 
 Vue.use(Router);
 
 const routes = [
+  { path: "/", name: "Home", component: Home },
   { path: "/example-preview", component: ExamplePreview },
   { path: "/async-example-preview", component: AsyncExamplePreview },
-  { path: "/lazy-load-example", component: LazyLoadExample }
+  { path: "/lazy-load-example", component: LazyLoadExample },
+  { path: "/directive", component: CustomDirective },
+  { path: "/data", component: DataLoaderView },
+  { path: "*", component: Error404 } // has to exist to catch any non existing page requests
 ];
 
 export default new Router({

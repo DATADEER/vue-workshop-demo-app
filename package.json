@@ -11,9 +11,12 @@
     "storybook": "start-storybook"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "core-js": "^2.6.5",
+    "material-design-icons-iconfont": "^5.0.1",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
+    "vuetify": "^1.5.14",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
@@ -35,6 +38,8 @@
     "eslint-plugin-vue": "^5.0.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.1.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
     "vue-loader": "^15.7.0",
     "vue-template-compiler": "^2.6.10"
   }
