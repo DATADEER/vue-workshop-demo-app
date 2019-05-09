@@ -20,3 +20,11 @@
 # Unit Testing
 
 - Edit jest config to remove folder prefix for spec files
+
+# Storybook
+
+### Add Storybook and peer dependencies
+
+```console
+    vue add storybook
+```

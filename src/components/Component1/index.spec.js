@@ -1,10 +1,10 @@
 import { mount } from "@vue/test-utils";
 
-import Example2 from ".";
+import Component1 from ".";
 
-describe("Example1", () => {
+describe("Component1", () => {
   it("renders h1", () => {
-    const wrapper = mount(Example2);
+    const wrapper = mount(Component1);
     expect(wrapper.find("h1").is("h1")).toBe(true);
   });
 });
