@@ -21,7 +21,12 @@
 export default {
   name: "SensorCard",
   props: {
-    sensor: Object
+    sensor: {
+      room_name: String,
+      ip_address: String,
+      mac_address: String,
+      temperature: Number
+    }
   }
 };
 </script>

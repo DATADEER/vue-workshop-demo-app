@@ -14,7 +14,7 @@
     </section>
     <template v-for="sensor in temps">
       <slot :sensor="sensor">
-        <p>{{ sensor.temperature }}</p>
+        <p :key="sensor.id">{{ sensor.temperature }}</p>
       </slot>
     </template>
   </section>

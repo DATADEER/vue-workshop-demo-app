@@ -89,7 +89,7 @@
 </template>
 
 <script>
-import scroll from "@/shared/directives/scroll.js";
+import scroll from "@/shared/directives/scroll.js"; // eslint-disable-line no-unused-vars
 import Button from "@/components/Buttons/Button";
 
 export default {
