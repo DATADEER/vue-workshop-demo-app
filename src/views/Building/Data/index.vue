@@ -1,3 +1,3 @@
 <template>
-	<h1>Building > Data</h1>
+  <h1>Building > Data</h1>
 </template>
