@@ -3,14 +3,17 @@
     <article class="modal__container">
       <header class="modal__header">
         <div class="modal__container-title">
+          <!-- TODO: Implement Scoped Slot -->
         </div>
         <i @click="$emit('close')" class="modal__button--close material-icons">
           close
         </i>
       </header>
       <main class="modal__body">
+        <!-- TODO: Implement Scoped Slot -->
       </main>
       <footer class="modal__footer">
+        <!-- TODO: Implement Scoped Slot -->
       </footer>
       <slot></slot>
     </article>

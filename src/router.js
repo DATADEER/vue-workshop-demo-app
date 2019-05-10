@@ -5,6 +5,7 @@ import CustomDirective from "@/views/CustomDirective/index.vue";
 import Home from "@/views/Home/index.vue";
 import DataLoaderView from "@/views/DataLoaderView/index.vue";
 import DynamicList from "@/views/DynamicListView/index.vue";
+import DynamicListStart from "@/views/DynamicListView/start.index.vue";
 import IsComponent from "@/views/IsComponent/index.vue";
 import Lifecycle from "@/views/Lifecycle/index.vue";
 import MixinView from "@/views/MixinView/index.vue";
@@ -26,6 +27,7 @@ const routes = [
   { path: "/directive", component: CustomDirective },
   { path: "/data", component: DataLoaderView },
   { path: "/list", component: DynamicList },
+  { path: "/start/list", component: DynamicListStart },
   { path: "/iscomponent", component: IsComponent },
   { path: "/lifecycle", component: Lifecycle },
   { path: "/mixin", component: MixinView },

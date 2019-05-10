@@ -12,9 +12,7 @@
         ></v-select>
       </v-flex>
     </section>
-    <template v-for="sensor in temps">
-      <slot :sensor="sensor" :temps="temps"> </slot>
-    </template>
+    <!-- TODO: Implement Slot Props -->
   </section>
 </template>
 
@@ -51,17 +49,7 @@ export default {
           break;
       }
     },
-    removeSensor(sensor) {
-      console.log(sensor);
-      this.temps.splice(this.temps.indexOf(sensor), 1);
-    }
   },
-  computed: {},
-  mounted() {
-    this.$on("removeSensor", payload => {
-      this.removeSensor(payload);
-    });
-  }
 };
 </script>
 
