@@ -12,19 +12,9 @@
   - Router Mode: History
 - packages
   - vuetify
+  - stylus
   - lodash
   - axios
   - material-design-icons-iconfont
 - storybook
 
-# Unit Testing
-
-- Edit jest config to remove folder prefix for spec files
-
-# Storybook
-
-### Add Storybook and peer dependencies
-
-```console
-    vue add storybook
-```
