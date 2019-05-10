@@ -14,9 +14,12 @@ import ToggleView from "@/views/ToggleView/index.vue";
 
 const LazyLoadExample = () => import("@/views/LazyLoadExample");
 
+import { BUILDING_ROUTES } from "./views/Building/routes";
+
 Vue.use(Router);
 
 const routes = [
+  ...BUILDING_ROUTES,
   { path: "/", name: "Home", component: Home },
   { path: "/lazy-load-example", component: LazyLoadExample },
   { path: "/directive", component: CustomDirective },

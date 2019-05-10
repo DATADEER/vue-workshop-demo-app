@@ -2,7 +2,10 @@
 	<section>
 		<article>
 			<h2>Project Structure</h2>
-			<router-link to="/lazy-load-example">Lazy Load Example</router-link>
+			<router-link to="/lazy-load-example">Lazy Load Example</router-link>|
+			<router-link to="/building/data">Building Data</router-link>|
+			<router-link to="/building/detail">Building Detail</router-link>|
+			<router-link to="/building/edit">Building Edit</router-link>
 		</article>
 		<article>
 			<h2>Component Modularity</h2>
