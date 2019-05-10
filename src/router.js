@@ -2,6 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 import Error404 from "@/views/404/index.vue";
 import CustomDirective from "@/views/CustomDirective/index.vue";
+import CustomDirectiveStart from "@/views/CustomDirective/start.index.vue";
 import Home from "@/views/Home/index.vue";
 import DataLoaderView from "@/views/DataLoaderView/index.vue";
 import DynamicList from "@/views/DynamicListView/index.vue";
@@ -25,6 +26,7 @@ const routes = [
   { path: "/", name: "Home", component: Home },
   { path: "/lazy-load-example", component: LazyLoadExample },
   { path: "/directive", component: CustomDirective },
+  { path: "/start/directive", component: CustomDirectiveStart },
   { path: "/data", component: DataLoaderView },
   { path: "/list", component: DynamicList },
   { path: "/start/list", component: DynamicListStart },
