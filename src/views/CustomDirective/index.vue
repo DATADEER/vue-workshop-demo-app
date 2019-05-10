@@ -1,6 +1,6 @@
 <template>
   <section>
-    <Button v-scroll:right="40">Important Button</Button>
+    <Button v-scroll:right.fixed="40">Important Button</Button>
     <section class="text__wrapper">
       <article class="text__container">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, autem
@@ -91,10 +91,11 @@
 <script>
 import scroll from "@/shared/directives/scroll.js"; // eslint-disable-line no-unused-vars
 import Button from "@/components/Buttons/Button";
+import Modal from "../../components/Modal/Basic/index";
 
 export default {
   name: "CustomDirective",
-  components: { Button }
+  components: { Modal, Button }
 };
 </script>
 

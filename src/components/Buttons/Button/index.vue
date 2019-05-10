@@ -24,11 +24,6 @@
 <script>
 export default {
   name: "Button",
-  created() {
-    console.log(this.$props);
-    console.log(this.$listeners);
-    console.log(this.$attrs);
-  },
   props: {
     flat: Boolean,
     small: Boolean,
@@ -37,6 +32,11 @@ export default {
       type: String,
       default: "success"
     }
+  },
+  created() {
+    console.log(this.$props);
+    console.log(this.$listeners);
+    console.log(this.$attrs);
   }
 };
 </script>

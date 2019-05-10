@@ -1,12 +1,12 @@
 <template>
   <DynamicList>
     <template v-slot:default="sensorData">
-      <TemperatureChipFunctional
+      <!--<TemperatureChipFunctional
         :temperature="sensorData.sensor.temperature"
       ></TemperatureChipFunctional>
       <TemperatureChip
         :temperature="sensorData.sensor.temperature"
-      ></TemperatureChip>
+      ></TemperatureChip>-->
       <SensorCard
         class="card__container"
         :sensor="sensorData.sensor"

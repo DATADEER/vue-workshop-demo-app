@@ -25,9 +25,26 @@
         </div>
       </article>
       <router-link :to="{ name: 'Home' }">Home</router-link>
-      <span> | </span>
-      <router-link :to="{ name: 'RoutingById', params: { id: 42 } }"
-        >Property 42</router-link
+      |
+      <router-link :to="{ name: 'RoutingById', params: { id: 1 } }"
+        >Property 1 (Name)</router-link
+      >
+      |
+      <router-link
+        :to="{
+          name: 'RoutingById',
+          params: { id: 42 },
+          query: { fullData: true }
+        }"
+        >Property 42 (Name)</router-link
+      >
+      |
+      <router-link :to="{ path: '/routing/42?fullData=true' }"
+        >Property 42 (Path)</router-link
+      >
+      |
+      <router-link :to="'/routing/42?fullData=true'"
+        >Property 42 (Short Path)</router-link
       >
     </section>
   </section>
@@ -55,6 +72,28 @@ export default {
     console.log("router", this.$router);
     console.log("route", this.$route);
     console.log("id", this.$route.params.id);
+    console.log("query", this.$route.query);
+  },
+  beforeRouteEnter(to, from, next) {
+    console.group("beforeRouteEnter");
+    console.log("to", to);
+    console.log("from", from);
+    console.groupEnd("beforeRouteEnter");
+    next(vm => console.log("vm", vm));
+  },
+  beforeRouteLeave(to, from, next) {
+    console.group("beforeRouteLeave");
+    console.log("to", to);
+    console.log("from", from);
+    console.groupEnd("beforeRouteLeave");
+    next(vm => console.log("vm", vm));
+  },
+  beforeRouteUpdate(to, from, next) {
+    console.group("beforeRouteUpdate");
+    console.log("to", to);
+    console.log("from", from);
+    console.groupEnd("beforeRouteUpdate");
+    next(vm => console.log("vm", vm));
   },
   computed: {
     routeParams() {

@@ -9,6 +9,7 @@ import IsComponent from "@/views/IsComponent/index.vue";
 import Lifecycle from "@/views/Lifecycle/index.vue";
 import MixinView from "@/views/MixinView/index.vue";
 import ModalView from "@/views/ModalView/index.vue";
+import ModalViewStart from "@/views/ModalView/start.index.vue";
 import RoutingView from "@/views/RoutingView/index.vue";
 import ToggleView from "@/views/ToggleView/index.vue";
 
@@ -29,6 +30,7 @@ const routes = [
   { path: "/lifecycle", component: Lifecycle },
   { path: "/mixin", component: MixinView },
   { path: "/modal", component: ModalView },
+  { path: "/start/modal", component: ModalViewStart },
   {
     path: "/routing",
     name: "Routing",
