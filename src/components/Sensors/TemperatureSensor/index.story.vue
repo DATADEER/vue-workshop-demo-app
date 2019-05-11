@@ -3,10 +3,14 @@
     <h1>TemperatureSensor</h1>
     <div class="component_wrapper">
       <div class="input_wrapper">
-        <input placeholder="Name" v-model="sensor.room_name">
-        <input placeholder="IP" v-model="sensor.ip_address">
-        <input placeholder="MAC" v-model="sensor.mac_address">
-        <input placeholder="Temperature" v-model="sensor.temperature" type="number">
+        <input placeholder="Name" v-model="sensor.room_name" />
+        <input placeholder="IP" v-model="sensor.ip_address" />
+        <input placeholder="MAC" v-model="sensor.mac_address" />
+        <input
+          placeholder="Temperature"
+          v-model="sensor.temperature"
+          type="number"
+        />
       </div>
       <TemperatureSensor v-bind="sensor"></TemperatureSensor>
     </div>
