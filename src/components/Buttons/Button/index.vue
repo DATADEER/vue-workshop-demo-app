@@ -34,9 +34,9 @@ export default {
     }
   },
   created() {
-    console.log(this.$props);
-    console.log(this.$listeners);
-    console.log(this.$attrs);
+    //console.log(this.$props);
+    //console.log(this.$listeners);
+    //console.log(this.$attrs);
   }
 };
 </script>
