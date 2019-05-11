@@ -18,6 +18,10 @@
       <router-link to="/modal">Modal</router-link>|
       <router-link to="/routing/12/name/somename">Routing</router-link>
     </article>
+    <article>
+      <h2>Fertige Component Libraries</h2>
+      <router-link to="/vuetify">Vuetify</router-link>|
+    </article>
   </section>
 </template>
 
