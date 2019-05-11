@@ -13,6 +13,11 @@ describe("Sensor", () => {
     expect(() => shallowMount(Sensor)).not.toThrow();
   });
 
+  it("renders props", () => {
+    const wrapper = shallowMount(Sensor, { propsData: mockedProps });
+    expect(wrapper).toMatchSnapshot();
+  });
+
   describe("renders prop", () => {
     const wrapper = shallowMount(Sensor, { propsData: mockedProps });
 

@@ -1,7 +1,7 @@
 import { storiesOf } from "@storybook/vue";
-import SensorCardStorie from "../components/Sensors/SensorCard/index.story.vue";
+import TemperatureSensor from "@/components/Sensors/TemperatureSensor/index.story.vue";
 
-storiesOf("SensorCard", module).add(
-  "As a customizable component",
-  () => SensorCardStorie
+storiesOf("TemperatureSensor", module).add(
+  "with customizable props",
+  () => TemperatureSensor
 );

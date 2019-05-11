@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sensor renders props 1`] = `
+<div>
+  <h3>Bedroom</h3>
+  <div>IP: 127.0.0.1</div>
+  <div>Mac: 00:0d:83:b1:c0:8e</div>
+  <div>Sensor: 22° C</div>
+</div>
+`;
