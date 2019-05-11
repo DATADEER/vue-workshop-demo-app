@@ -1,8 +1,8 @@
 <template>
-  <div class="">
+  <div>
     <v-btn
       v-on="$listeners"
-      v-bind="$props"
+      v-bind="{ ...$props, ...$attrs }"
       :color="color"
       class="button--default"
       ><slot

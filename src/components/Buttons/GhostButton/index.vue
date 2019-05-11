@@ -1,6 +1,10 @@
 <template>
-  <div class="">
-    <v-btn @click="$emit('click')" :small="small" class="btn--ghost"
+  <div>
+    <v-btn
+      @click="$emit('click')"
+      v-on="$listeners"
+      v-bind="{ ...$props, ...$attrs }"
+      class="btn--ghost"
       ><slot
     /></v-btn>
   </div>
@@ -8,10 +12,7 @@
 
 <script>
 export default {
-  name: "GhostButton",
-  props: {
-    small: Boolean
-  }
+  name: "GhostButton"
 };
 </script>
 

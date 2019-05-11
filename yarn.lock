@@ -916,7 +916,22 @@
     error-stack-parser "^2.0.0"
     string-width "^2.0.0"
 
-"@storybook/addons@5.0.11":
+"@storybook/addon-notes@^4.1.0 || ^5.0.0":
+  version "5.0.11"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-notes/-/addon-notes-5.0.11.tgz#ce7aa0f4c9f2e5735353c742943266ca39372fe2"
+  integrity sha512-JQVo36o9b8oC3vwStZqLCgeb38DC4418Jb1dZLBD7K3/hCXFjE86BpFVewpsNvmQtIoh/2ZM2Y0xpb1KIgbjnA==
+  dependencies:
+    "@storybook/addons" "5.0.11"
+    "@storybook/client-logger" "5.0.11"
+    "@storybook/components" "5.0.11"
+    "@storybook/core-events" "5.0.11"
+    "@storybook/theming" "5.0.11"
+    core-js "^2.6.5"
+    markdown-to-jsx "^6.9.1"
+    prop-types "^15.6.2"
+    util-deprecate "^1.0.2"
+
+"@storybook/addons@5.0.11", "@storybook/addons@^4.1.0 || ^5.0.0":
   version "5.0.11"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-5.0.11.tgz#86de70747e0a692d9dd8ea431daa1147d8785697"
   integrity sha512-zw3vjYa2EfFQKKZd8/o44eVy5xaZpFEBY/4mGMBBTQb57H0X1VTzE4VxHrk7fGPJMdmrPfXbYEiQtfHyO56y+w==
@@ -1168,7 +1183,7 @@
     telejson "^2.1.1"
     util-deprecate "^1.0.2"
 
-"@storybook/vue@^5.0.11":
+"@storybook/vue@^4.1.0 || ^5.0.0", "@storybook/vue@^5.0.11":
   version "5.0.11"
   resolved "https://registry.yarnpkg.com/@storybook/vue/-/vue-5.0.11.tgz#bf796eeb8bfed3d3d8784cc3df87d2b7c1afa70b"
   integrity sha512-4TzTxk7fYd9N82vuylQUZZ6LcLujobSGH0HL3ni6EB7lNXRH/VjYtOo9TmkJWV+tgsfNZH3NhV35Z+TJ5EU4ZQ==
@@ -12350,6 +12365,15 @@ vm-browserify@0.0.4:
   integrity sha1-XX6kW7755Kb/ZflUOOCofDV9WnM=
   dependencies:
     indexof "0.0.1"
+
+vue-cli-plugin-storybook@^0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/vue-cli-plugin-storybook/-/vue-cli-plugin-storybook-0.6.1.tgz#9bb8a284464b14bf92372cc48e00d980f8adc536"
+  integrity sha512-3SX8jBK9yykPzKzXbWJuhRmcE2vC9sPW8fkqPQLqNQgm0FDs3ctRJyvm7NrOo+EsGH+qlsH0niiSaN0ICuyVWg==
+  dependencies:
+    "@storybook/addons" "^4.1.0 || ^5.0.0"
+    "@storybook/vue" "^4.1.0 || ^5.0.0"
+    commander "^2.19.0"
 
 vue-eslint-parser@^2.0.3:
   version "2.0.3"

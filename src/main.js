@@ -15,10 +15,11 @@ import Vuetify, {
   VCardTitle,
   VChip,
   VAvatar,
-  VIcon
+  VIcon,
+  VSnackbar
 } from "vuetify/lib";
 import colors from "vuetify/es5/util/colors";
-import "vuetify/dist/vuetify.min.css";
+import "vuetify/src/stylus/app.styl";
 import "material-design-icons-iconfont/dist/material-design-icons.css";
 
 Vue.use(Vuetify, {
@@ -34,8 +35,10 @@ Vue.use(Vuetify, {
     VCardTitle,
     VChip,
     VAvatar,
-    VIcon
+    VIcon,
+    VSnackbar
   },
+  directives: {},
   theme: {
     primary: colors.purple,
     secondary: colors.grey.darken1,
