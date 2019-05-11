@@ -16,6 +16,8 @@ import RoutingView from "@/views/RoutingView/index.vue";
 import ToggleView from "@/views/ToggleView/index.vue";
 import VuetifyView from "@/views/Vuetify/index.vue";
 import VuetifyStart from "@/views/Vuetify/start.index.vue";
+import Pitfalls from "@/views/Pitfalls/index.vue";
+import PitfallsStart from "@/views/Pitfalls/start.index.vue";
 
 const LazyLoadExample = () => import("@/views/LazyLoadExample");
 
@@ -39,6 +41,8 @@ const routes = [
   { path: "/start/vuetify", component: VuetifyStart },
   { path: "/modal", component: ModalView },
   { path: "/start/modal", component: ModalViewStart },
+  { path: "/pitfalls", component: Pitfalls },
+  { path: "/start/pitfalls", component: PitfallsStart },
   {
     path: "/routing",
     name: "Routing",
