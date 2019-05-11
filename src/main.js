@@ -49,6 +49,10 @@ Vue.use(Vuetify, {
 });
 
 Vue.config.productionTip = false;
+if (process.NODE_ENV === "development") {
+  Vue.config.devtools = true;
+  Vue.config.performance = true;
+}
 
 new Vue({
   router,

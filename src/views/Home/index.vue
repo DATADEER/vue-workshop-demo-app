@@ -22,6 +22,10 @@
       <h2>Fertige Component Libraries</h2>
       <router-link to="/vuetify">Vuetify</router-link>
     </article>
+    <article>
+      <h2>Vue Pitfalls</h2>
+      <router-link to="/pitfalls">Pitfalls</router-link>
+    </article>
   </section>
 </template>
 
