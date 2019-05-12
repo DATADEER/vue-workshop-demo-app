@@ -3,7 +3,7 @@
     <Button @click="showModal = true" large>Open Modal</Button>
     <Modal @close="showModal = false" v-if="showModal">
       <h1>Default slot content</h1>
-      <!-- TODO: Implement Scoped Slot -->
+      <!-- TODO: Implement Scoped Slot Templates-->
     </Modal>
   </div>
 </template>

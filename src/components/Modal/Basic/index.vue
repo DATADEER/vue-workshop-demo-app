@@ -14,7 +14,7 @@
       </main>
       <footer class="modal__footer">
         <slot name="footer">
-          <Button color="error" @click="$emit('close')">abort</Button>
+          <v-btn color="error" @click="$emit('close')">abort</v-btn>
         </slot>
       </footer>
       <slot></slot>

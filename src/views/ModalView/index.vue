@@ -8,9 +8,9 @@
       <template v-slot:body>
         <h1>This modal can be closed and opened. It supports slots</h1>
       </template>
-      <!--<template v-slot:footer>
-                <Button @click="showModal=false" small>confirm</Button>
-            </template>-->
+      <template v-slot:footer>
+        <Button @click="showModal = false" small>confirm</Button>
+      </template>
       <h1>Default slot content</h1>
     </Modal>
   </div>
