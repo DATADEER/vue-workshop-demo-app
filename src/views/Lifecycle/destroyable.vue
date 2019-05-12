@@ -9,7 +9,7 @@ import {
   logHookFeatures,
   lifecycleHooksFeatureDetectionTable
 } from "@/shared/utils/logging/index.js";
-import lifecycleMixin from "@/shared/mixins/lifecycle.js";
+import lifecycleMixin from "@/shared/mixins/lifecycle/index.js";
 
 export default {
   name: "Destroyable",

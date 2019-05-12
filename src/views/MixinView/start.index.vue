@@ -12,15 +12,15 @@
 </template>
 
 <script>
-import locale from "@/shared/mixins/locale/index.js";
+//TODO: import mixin
 import GhostButton from "@/components/Buttons/GhostButton/index.vue";
 
+//TODO: register mixin in component
 export default {
   name: "MixinView",
   components: {
     GhostButton
-  },
-  mixins: [locale]
+  }
 };
 </script>
 

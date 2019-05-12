@@ -10,7 +10,7 @@
 <script>
 import Button from "@/components/Buttons/Button";
 import Destroyable from "./destroyable";
-import lifecycleMixin from "@/shared/mixins/lifecycle.js";
+import lifecycleMixin from "@/shared/mixins/lifecycle/index.js";
 import {
   logHookFeatures,
   lifecycleHooksFeatureDetectionTable

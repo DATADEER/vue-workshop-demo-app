@@ -10,6 +10,7 @@ import DynamicListStart from "@/views/DynamicListView/start.index.vue";
 import IsComponent from "@/views/IsComponent/index.vue";
 import Lifecycle from "@/views/Lifecycle/index.vue";
 import MixinView from "@/views/MixinView/index.vue";
+import MixinViewStart from "@/views/MixinView/start.index.vue";
 import ModalView from "@/views/ModalView/index.vue";
 import ModalViewStart from "@/views/ModalView/start.index.vue";
 import RoutingView from "@/views/RoutingView/index.vue";
@@ -38,6 +39,7 @@ const routes = [
   { path: "/iscomponent", component: IsComponent },
   { path: "/lifecycle", component: Lifecycle },
   { path: "/mixin", component: MixinView },
+  { path: "/start/mixin", component: MixinViewStart },
   { path: "/vuetify", component: VuetifyView },
   { path: "/start/vuetify", component: VuetifyStart },
   { path: "/modal", component: ModalView },
