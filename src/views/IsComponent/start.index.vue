@@ -24,7 +24,7 @@ import TabHouse from "./Tabs/TabHouse";
 
 export default {
   name: "IsComponent",
-  components: { TabMotion, TabTemperature, TabHouse },
+  components: { TabMotion, TabTemperature, TabHouse }, // eslint-disable-line
   data() {
     return {
       currentTab: "House",
