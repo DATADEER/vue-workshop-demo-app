@@ -13,17 +13,18 @@
       </v-flex>
     </section>
     <!-- TODO: Implement Slot Props -->
+    <!-- this.sensors contains a list of sensors -->
   </section>
 </template>
 
 <script>
-import temperatures from "@/shared/assets/mock-data/temperatures.json";
+import sensorsJSON from "@/shared/assets/mock-data/temperatures.json";
 
 export default {
   name: "DynamicList",
   data() {
     return {
-      temps: temperatures,
+      sensors: sensorsJSON,
       items: [
         { text: "Temperature Descending", value: "TEMPERATURE_DESCENDING" },
         { text: "Temperature Ascending", value: "TEMPERATURE_ASCENDING" }
@@ -35,12 +36,12 @@ export default {
     sortTemperatures(event) {
       switch (event) {
         case "TEMPERATURE_DESCENDING":
-          this.temps.sort(function(a, b) {
+          this.sensors.sort(function(a, b) {
             return b.temperature - a.temperature;
           });
           break;
         case "TEMPERATURE_ASCENDING":
-          this.temps.sort(function(a, b) {
+          this.sensors.sort(function(a, b) {
             return a.temperature - b.temperature;
           });
           break;
@@ -48,8 +49,8 @@ export default {
           console.error("This option does not exist for temeperatur sorting");
           break;
       }
-    },
-  },
+    }
+  }
 };
 </script>
 

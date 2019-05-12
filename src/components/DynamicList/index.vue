@@ -12,20 +12,20 @@
         ></v-select>
       </v-flex>
     </section>
-    <span v-for="sensor in temps" :key="sensor.id">
-      <slot :sensor="sensor" :temps="temps"></slot>
+    <span v-for="sensor in sensors" :key="sensor.id">
+      <slot :sensor="sensor" :sensors="sensors"></slot>
     </span>
   </section>
 </template>
 
 <script>
-import temperatures from "@/shared/assets/mock-data/temperatures.json";
+import sensorsJSON from "@/shared/assets/mock-data/temperatures.json";
 
 export default {
   name: "DynamicList",
   data() {
     return {
-      temps: temperatures,
+      sensors: sensorsJSON,
       items: [
         { text: "Temperature Descending", value: "TEMPERATURE_DESCENDING" },
         { text: "Temperature Ascending", value: "TEMPERATURE_ASCENDING" }
@@ -37,12 +37,12 @@ export default {
     sortTemperatures(event) {
       switch (event) {
         case "TEMPERATURE_DESCENDING":
-          this.temps.sort(function(a, b) {
+          this.sensors.sort(function(a, b) {
             return b.temperature - a.temperature;
           });
           break;
         case "TEMPERATURE_ASCENDING":
-          this.temps.sort(function(a, b) {
+          this.sensors.sort(function(a, b) {
             return a.temperature - b.temperature;
           });
           break;
@@ -53,7 +53,7 @@ export default {
     },
     removeSensor(sensor) {
       console.log(sensor);
-      this.temps.splice(this.temps.indexOf(sensor), 1);
+      this.sensors.splice(this.sensors.indexOf(sensor), 1);
     }
   },
   computed: {},
