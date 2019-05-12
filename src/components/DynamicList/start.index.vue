@@ -12,8 +12,10 @@
         ></v-select>
       </v-flex>
     </section>
-    <!-- TODO: Implement Slot Props -->
     <!-- this.sensors contains a list of sensors -->
+    <span v-for="sensor in sensors" :key="sensor.id">
+      <!-- TODO: Implement Slot Props -->
+    </span>
   </section>
 </template>
 
