@@ -14,13 +14,12 @@ export default {
   },
   data() {
     return {
-      isLoading: false,
+      isLoading: true,
       response: null,
       error: null
     };
   },
   created() {
-    this.isLoading = true;
     axios
       .get(this.url)
       .then(response => {

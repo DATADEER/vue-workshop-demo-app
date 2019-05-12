@@ -5,8 +5,8 @@
       <ul v-if="!isLoading && response">
         <li :key="i" v-for="(user, i) in response.data">{{ user.name }}</li>
       </ul>
-      <div v-if="!isLoading && error">
-        <strong>{{ error.response.status }}</strong>
+      <div class="error__container" v-if="!isLoading && error">
+        <strong class="">Error: {{ error.response.status }}</strong>
         {{ error.response.statusText }}
       </div>
     </template>
@@ -21,4 +21,12 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+li {
+  list-style: none;
+}
+
+.error__container {
+  color: red;
+}
+</style>
