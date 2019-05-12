@@ -13,14 +13,14 @@ import { logHookFeatures } from "@/shared/utils/logging/index.js";
 
 function lifecycleHooksFeatureDetectionTable(self) {
   return {
-    "this.title": get(self, "title", "unavailable"),
-    "this.runSideeffect": isFunction(get(self, "runSideeffect", "unavailable"))
-      ? get(self, "runSideeffect", "unavailable")()
-      : "unavailable",
-    "this.reversedTitle": get(self, "reversedTitle", "unavailable")
-      ? get(self, "reversedTitle", "unavailable")
-      : "unavailable",
-    "h1 in DOM": document.querySelector("h1") ? "h1" : "unavailable"
+    data: get(self, "title", "UNAVAILABLE"),
+    methods: isFunction(get(self, "runSideeffect", "UNAVAILABLE"))
+      ? get(self, "runSideeffect", "UNAVAILABLE")()
+      : "UNAVAILABLE",
+    computed: get(self, "reversedTitle", "UNAVAILABLE")
+      ? get(self, "reversedTitle", "UNAVAILABLE")
+      : "UNAVAILABLE",
+    DOM: document.querySelector("h1") ? "h1" : "UNAVAILABLE"
   };
 }
 
@@ -30,10 +30,6 @@ export default {
     return {
       title: "The Lifecycle Hooks"
     };
-  },
-  rules: {
-    nice: "very",
-    good: "not"
   },
   components: {
     Button
