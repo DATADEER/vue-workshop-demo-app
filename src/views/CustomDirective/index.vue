@@ -89,13 +89,15 @@
 </template>
 
 <script>
-import scroll from "@/shared/directives/scroll.js"; // eslint-disable-line no-unused-vars
+import { scrollDirective } from "@/shared/directives/scroll.js";
 import Button from "@/components/Buttons/Button";
-import Modal from "../../components/Modal/Basic/index";
 
 export default {
   name: "CustomDirective",
-  components: { Modal, Button }
+  components: { Button },
+  directives: {
+    scroll: scrollDirective
+  }
 };
 </script>
 
@@ -105,6 +107,6 @@ export default {
   justify-content: center;
 }
 .text__container {
-  width: 30%;
+  width: 20%;
 }
 </style>

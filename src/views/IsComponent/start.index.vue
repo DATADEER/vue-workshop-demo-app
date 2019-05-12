@@ -2,19 +2,17 @@
   <section>
     <div class="tab-menu__container">
       <ul class="tab__list">
+        <!-- TODO: Implement navigation -->
+        <!-- Hint: https://vuejs.org/v2/guide/class-and-style.html#Object-Syntax -->
         <li :key="tab" v-for="tab in tabs">
-          <a
-            :class="['tab', { active: currentTab === tab }]"
-            @click="currentTab = tab"
-          >
+          <a class="tab">
             {{ tab }}
           </a>
         </li>
       </ul>
     </div>
     <div class="currentTab__container">
-      <component :is="currentTabName" class="currentTab__container">
-      </component>
+      <!-- TODO: Implement component tag -->
     </div>
   </section>
 </template>
