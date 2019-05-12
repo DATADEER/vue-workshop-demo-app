@@ -49,7 +49,6 @@ addDecorator(() => ({
 }));
 
 function loadStories() {
-  //require("../../src/stories/index.js");
   const req = require.context("../../", true, /\.story\.js$/);
   req.keys().forEach(filename => req(filename));
 }

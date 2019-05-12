@@ -1,0 +1,3 @@
+describe("TemperatureSensor", () => {
+  it("pass", () => {});
+});
