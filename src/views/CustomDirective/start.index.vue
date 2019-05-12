@@ -1,6 +1,6 @@
 <template>
   <section>
-    <!-- TODO: Apply custom directive "scroll" to button -->
+    <!-- TODO: apply custom scroll directive on "Important Button" -->
     <Button>Important Button</Button>
     <section class="text__wrapper">
       <article class="text__container">
@@ -90,9 +90,10 @@
 </template>
 
 <script>
-import scroll from "@/shared/directives/start.scroll.js"; // eslint-disable-line no-unused-vars
+//TODO: import scroll directive
 import Button from "@/components/Buttons/Button";
 
+//TODO: register scroll directive in component
 export default {
   name: "CustomDirective",
   components: { Button }

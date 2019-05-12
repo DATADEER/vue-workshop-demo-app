@@ -1,5 +1,3 @@
-import Vue from "vue";
-
 function handleScrollBoundary(scrollBoundary, binding, el) {
   if (window.scrollY >= scrollBoundary) {
     el.style.position = "fixed";
@@ -13,7 +11,7 @@ function handleScrollBoundary(scrollBoundary, binding, el) {
   }
 }
 
-Vue.directive("scroll", {
+export const scrollDirective = {
   bind(el, binding) {
     console.log("custom directive element", el);
     console.log("custom directive binding", binding);
@@ -30,4 +28,4 @@ Vue.directive("scroll", {
   unbind() {
     window.removeEventListener("scroll", handleScrollBoundary);
   }
-});
+};
