@@ -2,51 +2,31 @@
   <div>
     <h1>{{ title }} {{ $route.query.id }}</h1>
     <Button @click="$forceUpdate()">Update</Button>
+    <Destroyable @click="showDestroyable = false" v-if="showDestroyable" />
   </div>
 </template>
 
 <script>
-import get from "lodash/get";
-import isFunction from "lodash/isFunction";
 import Button from "@/components/Buttons/Button";
-import { logHookFeatures } from "@/shared/utils/logging/index.js";
-
-function lifecycleHooksFeatureDetectionTable(self) {
-  return {
-    data: get(self, "title", "UNAVAILABLE"),
-    methods: isFunction(get(self, "runSideeffect", "UNAVAILABLE"))
-      ? get(self, "runSideeffect", "UNAVAILABLE")()
-      : "UNAVAILABLE",
-    computed: get(self, "reversedTitle", "UNAVAILABLE")
-      ? get(self, "reversedTitle", "UNAVAILABLE")
-      : "UNAVAILABLE",
-    DOM: document.querySelector("h1") ? "h1" : "UNAVAILABLE"
-  };
-}
+import Destroyable from "./destroyable";
+import lifecycleMixin from "@/shared/mixins/lifecycle.js";
+import {
+  logHookFeatures,
+  lifecycleHooksFeatureDetectionTable
+} from "@/shared/utils/logging/index.js";
 
 export default {
   name: "Lifecycle",
-  data: function() {
+  data() {
     return {
-      title: "The Lifecycle Hooks"
+      showDestroyable: true
     };
   },
   components: {
-    Button
+    Button,
+    Destroyable
   },
-  methods: {
-    runSideeffect() {
-      return "sideeffect";
-    }
-  },
-  computed: {
-    reversedTitle() {
-      return this.title
-        .split("")
-        .reverse()
-        .join("");
-    }
-  },
+  mixins: [lifecycleMixin],
   beforeCreate() {
     logHookFeatures("beforeCreate", lifecycleHooksFeatureDetectionTable(this));
   },
@@ -54,7 +34,6 @@ export default {
     console.log("options", this.$options);
     logHookFeatures("created", lifecycleHooksFeatureDetectionTable(this));
   },
-
   beforeMount() {
     logHookFeatures("beforeMount", lifecycleHooksFeatureDetectionTable(this));
   },
@@ -67,9 +46,6 @@ export default {
   },
   updated() {
     logHookFeatures("updated", lifecycleHooksFeatureDetectionTable(this));
-  },
-  beforeDestroy() {
-    logHookFeatures("beforeDestroy", lifecycleHooksFeatureDetectionTable(this));
   },
   beforeRouteEnter(to, from, next) {
     logHookFeatures(
