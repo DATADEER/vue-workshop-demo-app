@@ -12,9 +12,9 @@
         ></v-select>
       </v-flex>
     </section>
-    <template v-for="sensor in temps">
-      <slot :sensor="sensor" :temps="temps"> </slot>
-    </template>
+    <span v-for="sensor in temps" :key="sensor.id">
+      <slot :sensor="sensor" :temps="temps"></slot>
+    </span>
   </section>
 </template>
 
