@@ -9,6 +9,7 @@
     </article>
     <article>
       <h2>Component Modularity</h2>
+      <router-link to="/slot">Slot</router-link> |
       <router-link to="/directive">Custom Directives</router-link> |
       <router-link to="/data">Data Loader Component</router-link> |
       <router-link to="/list">Dynamic List</router-link> |
