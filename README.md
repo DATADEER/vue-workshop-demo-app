@@ -15,6 +15,6 @@
   - stylus
   - lodash
   - axios
+  - husky
   - material-design-icons-iconfont
 - storybook
-
