@@ -42,7 +42,9 @@ const routes = [
   { path: "/modal", component: ModalView },
   { path: "/start/modal", component: ModalViewStart },
   { path: "/pitfalls", component: Pitfalls },
+  { path: "/pitfalls/:task", component: Pitfalls },
   { path: "/start/pitfalls", component: PitfallsStart },
+  { path: "/start/pitfalls/:task", component: PitfallsStart },
   {
     path: "/routing",
     name: "Routing",
