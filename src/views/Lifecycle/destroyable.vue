@@ -15,10 +15,16 @@ export default {
   name: "Destroyable",
   mixins: [lifecycleMixin],
   beforeDestroy() {
-    logHookFeatures("beforeDestroy", lifecycleHooksFeatureDetectionTable(this));
+    logHookFeatures(
+      "[DestroyableRedBox] beforeDestroy",
+      lifecycleHooksFeatureDetectionTable(this)
+    );
   },
   destroyed() {
-    logHookFeatures("destroyed", lifecycleHooksFeatureDetectionTable(this));
+    logHookFeatures(
+      "[DestroyableRedBox] destroyed",
+      lifecycleHooksFeatureDetectionTable(this)
+    );
   }
 };
 </script>

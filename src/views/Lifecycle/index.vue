@@ -28,42 +28,59 @@ export default {
   },
   mixins: [lifecycleMixin],
   beforeCreate() {
-    logHookFeatures("beforeCreate", lifecycleHooksFeatureDetectionTable(this));
+    logHookFeatures(
+      "[Lifecycle View] beforeCreate",
+      lifecycleHooksFeatureDetectionTable(this)
+    );
   },
   created() {
-    console.log("options", this.$options);
-    logHookFeatures("created", lifecycleHooksFeatureDetectionTable(this));
+    logHookFeatures(
+      "[Lifecycle View] created",
+      lifecycleHooksFeatureDetectionTable(this)
+    );
   },
   beforeMount() {
-    logHookFeatures("beforeMount", lifecycleHooksFeatureDetectionTable(this));
+    logHookFeatures(
+      "[Lifecycle View] beforeMount",
+      lifecycleHooksFeatureDetectionTable(this)
+    );
   },
 
   mounted() {
-    logHookFeatures("mounted", lifecycleHooksFeatureDetectionTable(this));
+    logHookFeatures(
+      "[Lifecycle View] mounted",
+      lifecycleHooksFeatureDetectionTable(this)
+    );
   },
   beforeUpdate() {
-    logHookFeatures("beforeUpdate", lifecycleHooksFeatureDetectionTable(this));
+    logHookFeatures(
+      "[Lifecycle View] beforeUpdate",
+      lifecycleHooksFeatureDetectionTable(this)
+    );
   },
   updated() {
-    logHookFeatures("updated", lifecycleHooksFeatureDetectionTable(this));
+    logHookFeatures(
+      "[Lifecycle View] updated",
+      lifecycleHooksFeatureDetectionTable(this)
+    );
   },
   beforeRouteEnter(to, from, next) {
     logHookFeatures(
-      "beforeRouteEnter",
+      "[Lifecycle View] beforeRouteEnter",
       lifecycleHooksFeatureDetectionTable(this)
     );
     next(() => {});
   },
   beforeRouteLeave(to, from, next) {
     logHookFeatures(
-      "beforeRouteLeave",
+      "[Lifecycle View] beforeRouteLeave",
       lifecycleHooksFeatureDetectionTable(this)
     );
     next(() => {});
   },
   beforeRouteUpdate(to, from, next) {
     logHookFeatures(
-      "beforeRouteUpdate",
+      "[Lifecycle View] beforeRouteUpdate",
       lifecycleHooksFeatureDetectionTable(this)
     );
     next(() => {});
