@@ -1,7 +1,8 @@
 <template>
   <div>
-    <h1>{{ title }} {{ $route.query.id }}</h1>
-    <Button @click="$forceUpdate()">Update</Button>
+    <h1>{{ title }}</h1>
+    <h2>Updated: {{ timesUpdated }}</h2>
+    <Button @click="timesUpdated++">Update</Button>
     <Destroyable @click="showDestroyable = false" v-if="showDestroyable" />
   </div>
 </template>
@@ -19,7 +20,8 @@ export default {
   name: "Lifecycle",
   data() {
     return {
-      showDestroyable: true
+      showDestroyable: true,
+      timesUpdated: 0
     };
   },
   components: {
