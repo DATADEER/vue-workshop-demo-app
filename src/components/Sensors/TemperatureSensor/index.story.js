@@ -1,5 +1,6 @@
 import { storiesOf } from "@storybook/vue";
 import { withKnobs, text, number } from "@storybook/addon-knobs";
+import centered from "@storybook/addon-centered/vue";
 import TemperatureSensor from ".";
 const markdown = `# TemperatureSensor
 Simple card component that displays data of a TemperatureSensor.
@@ -16,6 +17,7 @@ Simple card component that displays data of a TemperatureSensor.
 
 storiesOf("TemperatureSensor", module)
   .addDecorator(withKnobs)
+  .addDecorator(centered)
   .add(
     "docs",
     () => ({
