@@ -3,6 +3,9 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 
+import * as Sentry from "@sentry/browser";
+import * as Integrations from "@sentry/integrations";
+
 import Vuetify, {
   VApp, // required
   VBtn,
@@ -49,9 +52,20 @@ Vue.use(Vuetify, {
 });
 
 Vue.config.productionTip = false;
-if (process.NODE_ENV === "development") {
+if (process.env.NODE_ENV === "development") {
   Vue.config.devtools = true;
   Vue.config.performance = true;
+} else {
+  Sentry.init({
+    dsn: "https://1fb949591e56459da25c39c4c822ae43@sentry.io/1457749",
+    environment: process.env.NODE_ENV,
+    integrations: [
+      new Integrations.Vue({
+        Vue,
+        attachProps: true
+      })
+    ]
+  });
 }
 
 new Vue({
