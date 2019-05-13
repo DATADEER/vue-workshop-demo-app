@@ -19,11 +19,13 @@ import Vuetify, {
   VChip,
   VAvatar,
   VIcon,
-  VSnackbar
+  VSnackbar,
+  VDataTable
 } from "vuetify/lib";
 import colors from "vuetify/es5/util/colors";
 import "vuetify/src/stylus/app.styl";
 import "material-design-icons-iconfont/dist/material-design-icons.css";
+import deLang from "vuetify/es5/locale/de";
 
 Vue.use(Vuetify, {
   components: {
@@ -39,7 +41,8 @@ Vue.use(Vuetify, {
     VChip,
     VAvatar,
     VIcon,
-    VSnackbar
+    VSnackbar,
+    VDataTable
   },
   directives: {},
   theme: {
@@ -49,7 +52,11 @@ Vue.use(Vuetify, {
     accent: colors.shades.black,
     error: colors.red.accent3
   },
-  iconfont: "mdi"
+  iconfont: "mdi",
+  lang: {
+    locales: { de: deLang },
+    current: "de"
+  }
 });
 
 Vue.config.productionTip = false;

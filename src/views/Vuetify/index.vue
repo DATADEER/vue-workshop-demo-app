@@ -10,9 +10,11 @@
 
 <script>
 import VuetifyButtonComponent from "../../components/Vuetify/Buttons/index.vue";
+import VuetifyDataTable from "../../components/Vuetify/DataTable/index";
 export default {
   name: "vuetify-vue",
   components: {
+    VuetifyDataTable,
     VuetifyButtonComponent
   },
   data() {
