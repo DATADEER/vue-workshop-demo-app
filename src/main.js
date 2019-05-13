@@ -48,7 +48,8 @@ Vue.use(Vuetify, {
     success: colors.green.darken1,
     accent: colors.shades.black,
     error: colors.red.accent3
-  }
+  },
+  iconfont: "mdi"
 });
 
 Vue.config.productionTip = false;

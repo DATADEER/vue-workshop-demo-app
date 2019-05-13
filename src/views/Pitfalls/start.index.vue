@@ -1,5 +1,9 @@
 <template>
   <section>
+    <em v-if="!$route.params.task"
+      >missing parameter on /start/pitfalls route. Try something like
+      /start/pitfalls/NextTick</em
+    >
     <component :is="$route.params.task"></component>
   </section>
 </template>

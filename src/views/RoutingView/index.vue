@@ -69,6 +69,7 @@ export default {
     }
   },
   mounted() {
+    console.log("MOUNTED");
     console.log("router", this.$router);
     console.log("route", this.$route);
     console.log("id", this.$route.params.id);

@@ -1,21 +1,19 @@
 <template>
   <section>
-    <Button @click="snackbar = true">Submit</Button>
-    <GhostButton @click="snackbar = true">Edit</GhostButton>
-    <v-snackbar v-model="snackbar" :timeout="1000">
-      <em> Button was clicked</em>
-    </v-snackbar>
+    <em v-if="!$route.params.task"
+      >missing parameter on /start/vuetify route. Try something like
+      /start/vuetify/VuetifyButtonComponent</em
+    >
+    <component :is="$route.params.task"></component>
   </section>
 </template>
 
 <script>
-import Button from "../../components/Buttons/Button/start.index.vue";
-import GhostButton from "../../components/Buttons/GhostButton/start.index.vue";
+import VuetifyButtonComponent from "../../components/Vuetify/Buttons/start.index.vue";
 export default {
   name: "vuetify-vue",
   components: {
-    GhostButton,
-    Button
+    VuetifyButtonComponent
   },
   data() {
     return {
