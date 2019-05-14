@@ -14,21 +14,45 @@ describe("Counter", () => {
     });
 
     it("count reduces onClick on div with '-'", () => {
-      expect(wrapper.vm.count).toBe(0);
+      expect(
+        wrapper
+          .findAll("div")
+          .at(2)
+          .text()
+      ).toContain("0");
+
       wrapper
         .findAll("div")
         .at(1)
         .trigger("click");
-      expect(wrapper.vm.count).toBe(-1);
+
+      expect(
+        wrapper
+          .findAll("div")
+          .at(2)
+          .text()
+      ).toContain("-1");
     });
 
     it("count increases onClick on div with '+'", () => {
-      expect(wrapper.vm.count).toBe(0);
+      expect(
+        wrapper
+          .findAll("div")
+          .at(2)
+          .text()
+      ).toContain("0");
+
       wrapper
         .findAll("div")
         .at(3)
         .trigger("click");
-      expect(wrapper.vm.count).toBe(1);
+
+      expect(
+        wrapper
+          .findAll("div")
+          .at(2)
+          .text()
+      ).toContain("1");
     });
   });
 });

@@ -5,8 +5,9 @@
       v-bind="{ ...$props, ...$attrs }"
       :color="color"
       class="button--default"
-      ><slot
-    /></v-btn>
+    >
+      <slot/>
+    </v-btn>
     <!--
      Manually pass events and attributes
      <v-btn
@@ -17,7 +18,7 @@
       :large="large"
       class="button--default"
       ><slot
-    /></v-btn> -->
+    /></v-btn>-->
   </div>
 </template>
 
