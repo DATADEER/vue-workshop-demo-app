@@ -32,7 +32,10 @@
 
 <script>
 export default {
-  name: "Home"
+  name: "Home",
+  mounted() {
+    //Good place to force an error
+  }
 };
 </script>
 

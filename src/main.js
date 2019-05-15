@@ -59,21 +59,23 @@ Vue.use(Vuetify, {
   }
 });
 
+Sentry.init({
+  dsn: "https://1fb949591e56459da25c39c4c822ae43@sentry.io/1457749",
+  environment: process.env.NODE_ENV,
+  release: process.env.VUE_APP_SENTRY_RELEASE,
+  integrations: [
+    new Integrations.Vue({
+      Vue,
+      attachProps: true
+    })
+  ]
+});
+
 Vue.config.productionTip = false;
 if (process.env.NODE_ENV === "development") {
   Vue.config.devtools = true;
   Vue.config.performance = true;
 } else {
-  Sentry.init({
-    dsn: "https://1fb949591e56459da25c39c4c822ae43@sentry.io/1457749",
-    environment: process.env.NODE_ENV,
-    integrations: [
-      new Integrations.Vue({
-        Vue,
-        attachProps: true
-      })
-    ]
-  });
 }
 
 new Vue({

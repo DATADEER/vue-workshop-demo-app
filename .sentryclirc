@@ -1,0 +1,6 @@
+[auth]
+token=1f33bef6bb3045f480990a38e81bfbf4468d4019ba1b470eb524a9865efbebef
+
+[defaults]
+org=max-muller
+project=vue-workshop-demo-app
