@@ -5,6 +5,14 @@ import store from "./store";
 
 import * as Sentry from "@sentry/browser";
 import * as Integrations from "@sentry/integrations";
+import VueAnalytics from "vue-analytics";
+
+Vue.use(VueAnalytics, {
+  id: "UA-140324673-1",
+  checkDuplicatedScript: true,
+  router: router,
+  set: [{ field: "anonymizeIp", value: "true" }]
+});
 
 import Vuetify, {
   VApp, // required

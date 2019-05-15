@@ -46,6 +46,24 @@
       <router-link :to="'/routing/42?fullData=true'"
         >Property 42 (Short Path)</router-link
       >
+      <section class="mt-5">
+        <h1>Google Analytics Realtime Test</h1>
+        <router-link :to="'/routing/42/name/anonymeanaconda'"
+          >AnonymeAnaconda</router-link
+        >
+        |
+        <router-link :to="'/routing/42/name/parkendepython'"
+          >ParkendePython</router-link
+        >
+        |
+        <router-link :to="'/routing/42/name/convexecobra'"
+          >ConvexeCobra</router-link
+        >
+        |
+        <router-link :to="'/routing/42/name/mehrfarbigemamba'"
+          >MehrfarbigeMamba</router-link
+        >
+      </section>
     </section>
   </section>
 </template>
