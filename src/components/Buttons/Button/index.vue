@@ -6,7 +6,7 @@
       :color="color"
       class="button--default"
     >
-      <slot/>
+      <slot />
     </v-btn>
     <!--
      Manually pass events and attributes

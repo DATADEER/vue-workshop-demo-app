@@ -9,3 +9,11 @@
 <style lang="scss">
 @import "./shared/styles/index.scss";
 </style>
+<script>
+export default {
+  name: "App",
+  mounted() {
+    throw new TypeError("EXAMPLE_ERROR_ANONYMOUS");
+  }
+};
+</script>
